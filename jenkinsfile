@@ -5,9 +5,9 @@ node {
         
     stage('Run tests'){
         if(isUnix()){
-            sh "mvn clean test"
+            sh "mvn clean test -Dsurefire.rerunFailingTestsCount=2"
         } else {
-            bat "mvn clean test"
+            bat "mvn clean test -Dsurefire.rerunFailingTestsCount=2"
         }
     }
         
