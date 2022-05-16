@@ -1,6 +1,6 @@
 node {
     stage('Clone code') {
-        git ''
+        git 'https://github.com/cherepanovmaxim/LibraryCT.git'
     }
         
     stage('Run tests'){
